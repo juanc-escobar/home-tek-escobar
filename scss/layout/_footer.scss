@@ -61,5 +61,17 @@
         &__content {
             display: none;
         }
+
+        &__logo img {
+            width: 65%;
+        }
+
+        &__list a {
+            font-size: 1.8rem;
+        }
+
+        &__list li {
+            padding: 0.2rem;
+        }
     }
 }

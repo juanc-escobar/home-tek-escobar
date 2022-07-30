@@ -56,6 +56,10 @@ figcaption {
     &__text {
         text-align: justify;
     }
+
+    &__sub {
+        font-size: 3rem;
+    }
 }
 
 .media {
@@ -83,6 +87,11 @@ figcaption {
 @media screen and (max-width: 576px) {
     .block h1 {
         font-size: 4.5rem;
+    }
+
+    .block__sub {
+        font-size: 1.6rem;
+
     }
 }
 
@@ -115,6 +124,10 @@ figcaption {
 
         & p {
         font-size: 1.6rem;
+        }
+
+        &__sub {
+            font-size: 2rem;
         }
     }
 

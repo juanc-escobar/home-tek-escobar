@@ -40,47 +40,39 @@
     <!-- --------*MAIN*-------- -->
     <main class="contacto">
       <section class="contactanos" data-aos="fade-down-right">
-        <h1>Contactanos</h1>
-        <p>Llena con tus datos la siguiente informacion:</p>
-        <form action="">
+        <div class="contact__title">
+          <h1>Contactanos</h1>
+          <p>Llena con tus datos la siguiente informacion:</p>
+        </div>
+        <form class="contact__area" action="">
           <!-- Datos Generales -->
-          <fieldset>
-            <label for="nombre">¿Cual es tu nombre? <input type="text" id="nombre" name="nombre" placeholder="Pedro" required /></label>
-            <label for="apellido">¿Cual es tu apellido?<input type="text" id="apellido" name="apellido" placeholder="Perez" required /></label>
-            <label for="email"
-              >¿Correo electronico? <input type="email" id="email" name="email" placeholder="pedroperez@hotmail.com" required
-            /></label>
+          <fieldset class="area__field">
+            <div class="input__box">
+              <input class="input__box__input" type="text" id="nombre" name="nombre" placeholder=" " required />
+              <label class="input__box__label" for="nombre">Nombre: </label>
+            </div>
+            <div class="input__box">
+              <input class="input__box__input" type="text" id="apellido" name="apellido" placeholder=" " required />
+              <label class="input__box__label" for="apellido">Apellido: </label>
+            </div>
+            <div class="input__box">
+              <input class="input__box__input" type="email" id="email" name="email" placeholder=" " required />
+              <label class="input__box__label" for="email">E-mail: </label>
+            </div>
+            <div class="input__box">
+              <textarea class="input__box__input" id="preguntas" name="preguntas" rows="6" cols="100" placeholder=" "></textarea>
+              <label class="input__box__label" for="preguntas">Dudas: </label>
+            </div>
+            <div class="input__box__footer">
+              <input class="btn" type="submit" value="Enviar" class="input-btn" data-aos="slide-right" />
+              <input class="btn" type="reset" value="Borrar" class="input-btn" data-aos="slide-left" />
+            </div>
           </fieldset>
-          <hr class="redondo" />
-
-          <!-- metodo de contacto -->
-          <fieldset data-aos="fade-down-left">
-            <legend>¿Como prefieres que te contactemos?</legend>
-            <label for="correo"><input type="radio" id="correo" name="forma-de-contacto" class="inline" value="correo" /> Por correo</label>
-            <label for="telefono"><input type="radio" id="telefono" name="forma-de-contacto" class="inline" value="telefono" /> Por telefono</label>
-            <label for="terminos"
-              ><input type="checkbox" id="terminos" name="terminos" required class="inline" value="acepto" />Acepto compartir mi informacion para que
-              me contacten.</label
-            >
-          </fieldset>
-          <hr class="redondo" />
-
-          <!-- como llegaste a este sitio -->
-          <fieldset data-aos="fade-down-right">
-            <legend>¿Como llegaste a nuestra pagina?</legend>
-            <select name="referido-por">
-              <option value="">(Selecciona una opcion)</option>
-              <option value="redes">Redes sociales</option>
-              <option value="publicidad">Publicidad</option>
-              <option value="referido">Recomendado</option>
-              <option value="otro">Otro</option>
-            </select>
-            <label for="preguntas">¿Tienes preguntas?</label>
-            <textarea id="preguntas" name="preguntas" rows="10" cols="100" placeholder="¿como me suscribo?..."></textarea>
-          </fieldset>
-          <input type="submit" value="Enviar" class="input-btn" data-aos="slide-left" />
-          <input type="reset" value="Borrar" class="input-btn" data-aos="slide-right" />
         </form>
+        <figure class="form__img" data-aos="flip-down">
+          <img src="../assets/images/chat-bot.jpg" alt="Un chatbot amigable" />
+          <figcaption><a href="http://www.freepik.com">Designed by stories / Freepik</a></figcaption>
+        </figure>
       </section>
     </main>
 
