@@ -29,6 +29,7 @@
             color: map-get($color, secundario);
             text-align: center;
             font-size: 2.5rem;
+            font-weight: 500;
 
             &:hover {
                 @include hover (map-get($color, secundario), map-get($color, principal), 16px);

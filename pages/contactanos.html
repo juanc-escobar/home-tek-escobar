@@ -16,7 +16,10 @@
     <script src="https://kit.fontawesome.com/e8160e8580.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
@@ -64,15 +67,16 @@
               <label class="input__box__label" for="preguntas">Dudas: </label>
             </div>
             <div class="input__box__footer">
-              <input class="btn" type="submit" value="Enviar" class="input-btn" data-aos="slide-right" />
-              <input class="btn" type="reset" value="Borrar" class="input-btn" data-aos="slide-left" />
+              <input class="btn" type="submit" value="Enviar" class="input-btn" data-aos="flip-down" />
+              <input class="btn" type="reset" value="Borrar" class="input-btn" data-aos="flip-down" />
             </div>
           </fieldset>
         </form>
-        <figure class="form__img" data-aos="flip-down">
+        <picture class="form__img" data-aos="flip-down">
+          <source media="(max-width: 1200px )" srcset="../assets/images/chat-bot-m.jpg" />
           <img src="../assets/images/chat-bot.jpg" alt="Un chatbot amigable" />
           <figcaption><a href="http://www.freepik.com">Designed by stories / Freepik</a></figcaption>
-        </figure>
+        </picture>
       </section>
     </main>
 

@@ -1,20 +1,6 @@
-
-
 .contacto {
     margin: 7% 0;
     overflow: hidden;
-
-    // & h1 {
-    //     text-align: center;
-    //     font-size: 5.5rem;
-    //     margin-bottom: 3rem;
-    // }
-
-    // & p {
-    //     text-align: center;
-    //     margin-bottom: 3rem;
-    //     font-size: 2.3rem;
-    // }
 }
 
 .contactanos {
@@ -31,6 +17,11 @@
 .contact__title {
     grid-area: contact__title;
     margin: auto;
+
+    & h1, p {
+        text-align: center;
+    }
+
 }
 
 .contact__area {
@@ -65,10 +56,10 @@
         padding: 10px;
         border: 1px solid rgba(255, 255, 255, 0.25);
         border-radius: 5px;
-        background-color: #273238;
+        background-color: map-get($color, contact-back);
         outline: none;
         font-size: 1em;
-        color: #99e3ae;
+        color: map-get($color, contact-front);
     }
 
     &__label {
@@ -81,11 +72,11 @@
         pointer-events: none;
         text-transform: uppercase;
         transition: top 200ms ease-in;
-        color: #99e3ae;
+        color: map-get($color, contact-front);
         transition: top 200ms ease-in,
         left 200ms ease-in,
         font-size 200ms ease-in;
-        background-color: #273238;
+        background-color: map-get($color, contact-back);
     }
 }
 
@@ -110,8 +101,8 @@ fieldset {
 
 .btn {
     padding: 15px;
-    border: 3px solid #273238;
-    color: #273238;
+    border: 3px solid map-get($color, contact-back);
+    color: map-get($color, contact-back);
     font-size: 1.4rem;
     border-radius: 30px;
     width: 35%;
@@ -119,8 +110,8 @@ fieldset {
     font-weight: bold;
 
     &:hover {
-        background-color: #273238;
-        color: #99e3ae;
+        background-color: map-get($color, contact-back);
+        color: map-get($color, contact-front);
     }
 }
 
@@ -145,43 +136,10 @@ fieldset {
     .form__img { 
     display: none;
     }
-
 }
 
-
-// input, textarea,{
-//     margin: 10px 0 0 0;
-//     width: 60%;
-//     min-height: 3rem;
-// }
-
-// select {
-//     margin-bottom: 2.2rem;
-// }
-
-// .inline {
-//     width: unset;
-//     margin: 0 0.5em 0 0;
-//     vertical-align: middle;
-// }
-
-// .redondo {
-//     border-top: 3px solid rgb(175, 176, 177);
-//     border-radius: 5px;
-//     margin-bottom: 5rem;
-// }
-
-// .input-btn {
-//     display: block;
-//     width: 80%;
-//     margin: 1.5rem auto;
-//     height: 4rem;
-//     font-size: 2rem;
-//     border-radius: 30px;
-//     min-width: 300px;
-
-//     &:hover {
-//         background-color: map-get($color, principal);
-//         color: map-get($color, secundario);
-//     }
-// }
+@media screen and (max-width: 576px) {
+    .btn {
+        width: 45%;
+    }
+}
