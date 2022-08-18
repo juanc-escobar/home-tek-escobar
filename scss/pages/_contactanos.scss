@@ -1,0 +1,145 @@
+.contacto {
+    margin: 7% 0;
+    overflow: hidden;
+}
+
+.contactanos {
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "contact__title contact__title"
+    "contact__area contact__img";
+}
+
+.contact__title {
+    grid-area: contact__title;
+    margin: auto;
+
+    & h1, p {
+        text-align: center;
+    }
+
+}
+
+.contact__area {
+    grid-area: contact__area;
+}
+
+.area__field {
+    padding-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.form__img {
+    grid-area: contact__img;
+    margin: auto;
+
+    & img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.input__box {
+    position: relative;
+    width: 70%;
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 5px;
+        background-color: map-get($color, contact-back);
+        outline: none;
+        font-size: 1em;
+        color: map-get($color, contact-front);
+    }
+
+    &__label {
+        position: absolute;
+        left: 1rem;
+        top: 0.8rem;
+        padding: 0 0.5rem;
+        font-size: 1em;
+        color: rgba(255, 255, 255, 0.25);
+        pointer-events: none;
+        text-transform: uppercase;
+        transition: top 200ms ease-in;
+        color: map-get($color, contact-front);
+        transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200ms ease-in;
+        background-color: map-get($color, contact-back);
+    }
+}
+
+.input__box__input:focus ~ .input__box__label, .input__box__input:not(:placeholder-shown).input__box__input:not(:focus) ~ .input__box__label {
+    top: -0.5rem;
+    font-size: 1.2rem;
+    left: 0.8rem
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.input__box__footer {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 15px;
+    border: 3px solid map-get($color, contact-back);
+    color: map-get($color, contact-back);
+    font-size: 1.4rem;
+    border-radius: 30px;
+    width: 35%;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+        background-color: map-get($color, contact-back);
+        color: map-get($color, contact-front);
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .contactanos {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contactanos {
+        width: 90%;
+        grid-template-areas: 
+        "contact__title contact__title"
+        "contact__area contact__area";
+    }
+
+    .area__field {
+        padding-top: 7%;
+    }
+
+    .form__img { 
+    display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn {
+        width: 45%;
+    }
+}
